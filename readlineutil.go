@@ -42,6 +42,7 @@ func NewTerm(options ...Option) (*Term, error) {
 		return nil, ErrNotSupported
 	}
 	c.rc = new(readline.Config)
+	c.rc.DisableAutoSaveHistory = true
 	for _, o := range options {
 		o(&c)
 	}
