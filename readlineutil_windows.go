@@ -41,6 +41,6 @@ func (t *Term) Text() string {
 	return ""
 }
 
-func WithHistoryFile(_ string) Option {
-	return func() {}
+func WithHistoryFile(string) Option {
+	return nil
 }
