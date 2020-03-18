@@ -17,7 +17,7 @@ var ErrNotSupported = errors.New("not supported")
 
 // NewTerm returns ErrNotSupported, as on Windows, for
 // command history we rely on the one built into CMD.COM.
-func NewTerm(historyFilename string) (*Term, error) {
+func NewTerm(...Option) (*Term, error) {
 	return nil, ErrNotSupported
 }
 
